@@ -37,7 +37,7 @@ class ComposerVersion
             return false;
         }
 
-        return Comparator::greaterThan($packageInfo['latest_version'], $packageInfo['current_version']);
+        return Comparator::greaterThan($packageInfo['latest'], $packageInfo['current_version']);
     }
 
     /**
