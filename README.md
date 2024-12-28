@@ -38,7 +38,6 @@ If for some reason you still want to install this module independently, then ple
 ## Usage
 
 Please see the [Substratum Wiki][wiki] for usage instructions.
-```
 
 ## Preview
 - ...
