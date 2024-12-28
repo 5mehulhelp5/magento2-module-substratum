@@ -12,9 +12,11 @@
 - An abstracted Composer package information provider, primarily used for update checks
 - A basic, yet accessible, collapsible UI component and accompanying template
 - A 'navigator' model that provides observable values for:
-  - Battery level (See [Battery Status API][battery-status-api])
-  - Battery charging status (See [Battery Status API][battery-status-api])
-  - Network online status (See [navigator.onLine][navigator-on-line])
+  - Battery level
+  - Battery charging status
+  - Network status
+ 
+Further details on each of the features can be found on the [Substratum Wiki][wiki].
 
 ## Requirements
 
@@ -35,46 +37,7 @@ If for some reason you still want to install this module independently, then ple
 
 ## Usage
 
-### Composer Version Check
-
-```php
-use Aimes\Substratum\Model\ComposerVersion;
-
-public function __construct(
-    private readonly ComposerVersion $composerVersioning
-) {
-}
-
-public function foo()
-{
-    $packageName = 'foo/bar';
-    $info = $this->composerVersioning->getPackageInfo($packageName)
-    $updateAvailable = $this->composerVersioning->isUpdateAvailable($packageName);
-}
-```
-
-### Navigator JS Model
-
-```js
-require([
-    'Aimes_Substratum/js/model/navigator',
-], function (Navigator) {
-    // Get current values
-    const batteryLevel = Navigator.battery.level();
-    const batteryCharging = Navigator.battery.charging();
-    const isOnline = Navigator.network.isOnline();
-    
-    // Do something when values change
-    Navigator.battery.level.subscribe((batteryLevel) => {
-        console.log(`New battery level: ${batteryLevel}%`);
-    });
-    Navigator.battery.charging.subscribe((isCharging) => {
-        console.log(`Battery charging status changed; it is now ${batteryLevel ? 'charging' : 'not charging'}`);
-    });
-    Navigator.network.isOnline.subscribe((isOnline) => {
-        console.log(`Network status changed. You are now ${isOnline ? 'Online' : 'Offline'}`);
-    });
-});
+Please see the [Substratum Wiki][wiki] for usage instructions.
 ```
 
 ## Preview
@@ -93,5 +56,4 @@ require([
 [dependents]:https://packagist.org/packages/aimes/magento2-module-substratum/dependents?order_by=downloads
 [gpl]:https://www.gnu.org/licenses/gpl-3.0.en.html
 [author]:https://aimes.dev/
-[battery-status-api]:https://developer.mozilla.org/en-US/docs/Web/API/Battery_Status_API
-[navigator-on-line]:https://developer.mozilla.org/en-US/docs/Web/API/Navigator/onLine
+[wiki]:https://github.com/robaimes/magento2-module-substratum/wiki
