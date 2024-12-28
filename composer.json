@@ -15,6 +15,7 @@
     ],
     "type": "magento2-module",
     "require": {
+        "composer/composer": "^2.0",
         "magento/framework": "*"
     },
     "autoload": {
