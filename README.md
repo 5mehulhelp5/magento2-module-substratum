@@ -4,8 +4,6 @@
 
 - Compatible with _Magento Open Source_ and _Adobe Commerce_ `2.4.x`
 - Compatible with Mage OS
-- Compatible with Hyvä Themes
-
 
 > **NOTE: This module provides no out-of-the-box functionality. All features are opt-in and exist purely for the benefit of other modules to utilise.**
 
