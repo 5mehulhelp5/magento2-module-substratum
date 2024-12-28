@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Rob Aimes - https://aimes.dev/
+ * https://github.com/robaimes
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="aimes" translate="label" sortOrder="905" class="aimes-tab">
+            <label>Aimes</label>
+        </tab>
+        <section id="substratum"
+                 translate="label"
+                 type="text"
+                 sortOrder="10"
+                 showInDefault="1"
+                 showInWebsite="1"
+                 showInStore="1">
+            <label>Substratum</label>
+            <tab>aimes</tab>
+            <resource>Aimes_Substratum::system</resource>
+            <group id="general"
+                   translate="label comment"
+                   type="text"
+                   sortOrder="10"
+                   showInDefault="1"
+                   showInWebsite="1"
+                   showInStore="1">
+                <label>General</label>
+                <comment>General configuration for the Substratum library</comment>
+                <field id="menu_enabled"
+                       translate="label comment"
+                       type="select"
+                       sortOrder="10"
+                       showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1"
+                       canRestore="1">
+                    <label>Admin Menu</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                    <comment>Controls visibility of the top level item in the admin menu</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

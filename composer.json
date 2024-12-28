@@ -1,0 +1,28 @@
+{
+    "name": "aimes/magento2-module-substratum",
+    "version": "1.0.0",
+    "description": "N/A",
+    "homepage": "https://github.com/robaimes/magento2-module-substratum",
+    "license": [
+        "GPL-3.0-or-later"
+    ],
+    "authors": [
+        {
+            "name": "Rob Aimes",
+            "email": "rob@aimes.dev",
+            "homepage": "https://aimes.dev"
+        }
+    ],
+    "type": "magento2-module",
+    "require": {
+        "magento/framework": "*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Aimes\\Substratum\\": ""
+        }
+    }
+}

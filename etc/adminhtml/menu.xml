@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © Rob Aimes - https://aimes.dev/
+ * https://github.com/robaimes
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Aimes_Substratum::substratum_menu"
+             title="Aimes"
+             translate="title"
+             module="Aimes_Substratum"
+             resource="Aimes_Substratum::system"
+             sortOrder="75"
+             dependsOnConfig="substratum/general/menu_enabled"/>
+
+        <add id="Aimes_Substratum::substratum_title"
+             title="Substratum"
+             translate="title"
+             module="Aimes_Substratum"
+             parent="Aimes_Substratum::substratum_menu"
+             sortOrder="10"
+             resource="Aimes_Substratum::system"/>
+
+        <add id="Aimes_Substratum::configuration"
+             title="Configuration"
+             translate="title"
+             module="Aimes_Substratum"
+             parent="Aimes_Substratum::substratum_title"
+             resource="Aimes_Substratum::system"
+             sortOrder="10"
+             action="adminhtml/system_config/edit/section/substratum" />
+    </menu>
+</config>

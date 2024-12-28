@@ -1,0 +1,63 @@
+/**
+ * Copyright © Rob Aimes - https://aimes.dev/
+ * https://github.com/robaimes
+ */
+
+/** Set @url variable */
+.lib-url('image/aimes-hat.png', 'Aimes_Substratum');
+
+.aimes--bg-icon() {
+	background-image: url('@{url}');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
+.aimes--before-icon() {
+	.aimes--bg-icon();
+	content: '';
+	display: inline-block;
+	height: 1.5em;
+	width: 1.5em;
+}
+
+.aimes--flex-container() {
+	align-items: center;
+	display: flex;
+	gap: 1rem;
+}
+
+.admin__menu {
+	[data-ui-id="menu-aimes-substratum-substratum-menu"] {
+		&.level-0 {
+			& {
+				> a:before {
+					content: ''; // Annoyingly specific selector to avoid !important usage
+				}
+			}
+		}
+
+		> a::before {
+			.aimes--bg-icon();
+		}
+
+		.submenu-title {
+			.aimes--flex-container();
+
+			&::before {
+				.aimes--before-icon();
+			}
+		}
+	}
+}
+
+.aimes-tab {
+	.admin__page-nav-title {
+		.aimes--flex-container();
+
+		&::before {
+			.aimes--before-icon();
+			filter: invert(1);
+		}
+	}
+}

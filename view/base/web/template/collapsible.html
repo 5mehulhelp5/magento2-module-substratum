@@ -1,0 +1,32 @@
+<!--
+/**
+ * Copyright © Rob Aimes - https://aimes.dev/
+ * https://github.com/robaimes
+ */
+-->
+<if args="elems().length">
+    <div class="component-collapsible"
+         css="{
+             'active': opened,
+         }">
+        <div class="title"
+             data-role="title"
+             aria-expanded="false"
+             click="toggleOpened"
+             attr="{
+                 'aria-expanded': opened ? 'true' : 'false',
+                 'aria-controls': uid,
+                 'aria-label': title,
+             }">
+            <span translate="title"></span>
+        </div>
+        <div class="content"
+             data-role="content"
+             visible="opened"
+             attr="{
+                 'id': uid,
+             }">
+            <fastForEach args="data: elems, as: 'element'" render=""></fastForEach>
+        </div>
+    </div>
+</if>
