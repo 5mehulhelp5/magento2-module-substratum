@@ -10,6 +10,7 @@
 ## Features
 - A top-level admin menu item for all `Aimes` modules, for ease-of-access. By default, this is disabled. This is to prevent unnecessary menu clutter for those who only have a small number of modules.
 - An abstracted Composer package information provider, primarily used for update checks
+- A custom `SymfonyStyle` class for easy access to helper methods, reducing 'clutter' when developing custom CLI commands and resulting in cleaner code
 - A basic, yet accessible, collapsible UI component and accompanying template
 - A 'navigator' model that provides observable values for:
   - Battery level
