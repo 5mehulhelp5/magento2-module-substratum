@@ -13,7 +13,7 @@
              translate="title"
              module="Aimes_Substratum"
              resource="Aimes_Substratum::system"
-             sortOrder="75"
+             sortOrder="85"
              dependsOnConfig="substratum/general/menu_enabled"/>
 
         <add id="Aimes_Substratum::substratum_title"
